@@ -1,5 +1,40 @@
+:root {
+  --background: #0c1021;
+  --yellow: #fbde2d;
+  --blue: #8da6ce;
+  --orange: #ff6400;
+  --white: white;
+}
+
 html,
 body {
   margin: 0;
   padding: 0;
+  background-color: var(--background);
+  color: var(--white);
+  font-family: monospace;
+  font-size: 16px;
+}
+
+.main {
+  padding: 20px;
+}
+
+.prompt {
+  color: var(--yellow);
+}
+
+.prompt-input {
+  border: 1px solid var(--yellow);
+  background-color: transparent;
+  color: var(--white);
+}
+
+.prompt-input:focus {
+  outline: none;
+}
+
+pre {
+  line-height: 100%;
+  color: var(--blue);
 }
