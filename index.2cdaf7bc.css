@@ -19,23 +19,26 @@ html, body {
   padding: 20px;
 }
 
+.promptDiv {
+  display: flex;
+}
+
 .prompt {
   color: var(--yellow);
+  margin-right: 10px;
 }
 
 .prompt-input {
   border: 1px solid var(--yellow);
   color: var(--white);
+  width: 100%;
   background-color: #0000;
+  flex: 1;
 }
 
 .prompt-input:focus {
+  border: 1px solid var(--blue);
   outline: none;
-}
-
-pre {
-  color: var(--blue);
-  line-height: 100%;
 }
 
 /*# sourceMappingURL=index.2cdaf7bc.css.map */
