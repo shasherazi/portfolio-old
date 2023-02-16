@@ -1,3 +1,3 @@
-const getPrompt = () => 'guest@shasherazi ~ $ ';
+const getPrompt = () => 'guest@shasherazi ~ $';
 
 export default getPrompt;

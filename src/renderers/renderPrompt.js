@@ -5,6 +5,7 @@ import getPrompt from '../modules/getPrompt';
 const renderPrompt = (parentClassName) => {
   const parent = document.querySelector(parentClassName);
   const promptDiv = document.createElement('div');
+  promptDiv.classList.add('promptDiv');
   const prompt = Prompt(getPrompt());
   const input = Input();
   promptDiv.appendChild(prompt);

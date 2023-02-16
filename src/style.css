@@ -20,21 +20,24 @@ body {
   padding: 20px;
 }
 
+.promptDiv {
+  display: flex;
+}
+
 .prompt {
   color: var(--yellow);
+  margin-right: 10px;
 }
 
 .prompt-input {
   border: 1px solid var(--yellow);
   background-color: transparent;
   color: var(--white);
+  width: 100%;
+  flex: 1;
 }
 
 .prompt-input:focus {
   outline: none;
-}
-
-pre {
-  line-height: 100%;
-  color: var(--blue);
+  border: 1px solid var(--blue);
 }
