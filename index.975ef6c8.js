@@ -561,19 +561,26 @@ var _eventListners = require("./modules/eventListners");
 
 },{"./modules/eventListners":"eYhzN"}],"eYhzN":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-var _renderPrompt = require("./renderPrompt");
+var _handleInput = require("./handleInput");
+var _handleInputDefault = parcelHelpers.interopDefault(_handleInput);
+var _renderPrompt = require("../renderers/renderPrompt");
 var _renderPromptDefault = parcelHelpers.interopDefault(_renderPrompt);
-document.addEventListener("DOMContentLoaded", ()=>{
-    (0, _renderPromptDefault.default)(".main");
-});
+var _renderResponse = require("../renderers/renderResponse");
+var _renderResponseDefault = parcelHelpers.interopDefault(_renderResponse);
+document.addEventListener("DOMContentLoaded", ()=>{});
 document.addEventListener("keydown", (e)=>{
     if (e.key === "Enter") {
-        const input = document.querySelector(".input");
+        const input = document.querySelector("input");
+        const inputVal = input.value;
+        const response = (0, _handleInputDefault.default)(inputVal);
+        console.log(response);
         input.value = "";
+        (0, _renderPromptDefault.default)(".promptsAndResponses");
+        (0, _renderResponseDefault.default)(response, ".promptsAndResponses");
     }
 });
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"hMyTC","./renderPrompt":"7kHlV"}],"hMyTC":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"hMyTC","./handleInput":"k69dh","../renderers/renderPrompt":"hv20L","../renderers/renderResponse":"gHj76"}],"hMyTC":[function(require,module,exports) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -603,26 +610,51 @@ exports.export = function(dest, destName, get) {
     });
 };
 
-},{}],"7kHlV":[function(require,module,exports) {
+},{}],"k69dh":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _commands = require("../data/commands");
+var _commandsDefault = parcelHelpers.interopDefault(_commands);
+const handleInput = (input)=>{
+    if (!input) return "";
+    const { response  } = (0, _commandsDefault.default).find((command)=>command.name === input) || {
+        response: "command not found"
+    };
+    return response;
+};
+exports.default = handleInput;
+
+},{"../data/commands":"g78Ou","@parcel/transformer-js/src/esmodule-helpers.js":"hMyTC"}],"g78Ou":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+exports.default = [
+    {
+        name: "help",
+        response: "site is still under construction"
+    }
+];
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"hMyTC"}],"hv20L":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _input = require("../components/Input");
 var _inputDefault = parcelHelpers.interopDefault(_input);
 var _prompt = require("../components/Prompt");
 var _promptDefault = parcelHelpers.interopDefault(_prompt);
-var _getPrompt = require("./getPrompt");
+var _getPrompt = require("../modules/getPrompt");
 var _getPromptDefault = parcelHelpers.interopDefault(_getPrompt);
 const renderPrompt = (parentClassName)=>{
     const parent = document.querySelector(parentClassName);
+    const promptDiv = document.createElement("div");
     const prompt = (0, _promptDefault.default)((0, _getPromptDefault.default)());
     const input = (0, _inputDefault.default)();
-    console.log(prompt);
-    parent.appendChild(prompt);
-    parent.appendChild(input);
+    promptDiv.appendChild(prompt);
+    promptDiv.appendChild(input);
+    parent.appendChild(promptDiv);
 };
 exports.default = renderPrompt;
 
-},{"../components/Input":"irpU3","../components/Prompt":"iJ5Ae","./getPrompt":"a8PtX","@parcel/transformer-js/src/esmodule-helpers.js":"hMyTC"}],"irpU3":[function(require,module,exports) {
+},{"../components/Input":"irpU3","../components/Prompt":"iJ5Ae","../modules/getPrompt":"a8PtX","@parcel/transformer-js/src/esmodule-helpers.js":"hMyTC"}],"irpU3":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 const Input = ()=>{
@@ -651,6 +683,18 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 const getPrompt = ()=>"guest@shasherazi ~ $ ";
 exports.default = getPrompt;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"hMyTC"}],"gHj76":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+const renderResponse = (response, parentClassName)=>{
+    const parent = document.querySelector(parentClassName);
+    const responseDiv = document.createElement("div");
+    responseDiv.classList.add("response");
+    responseDiv.innerHTML = response;
+    parent.appendChild(responseDiv);
+};
+exports.default = renderResponse;
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"hMyTC"}]},["au4Ql","8lqZg"], "8lqZg", "parcelRequire2041")
 
