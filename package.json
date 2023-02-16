@@ -19,6 +19,5 @@
     "parcel": "^2.8.3",
     "typescript": "^4.9.5"
   },
-  "main": "index.js",
   "repository": "git@github.com:shasherazi/portfolio.git"
 }
