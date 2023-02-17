@@ -565,37 +565,7 @@ var _handleEnter = require("./handleEnter");
 var _handleEnterDefault = parcelHelpers.interopDefault(_handleEnter);
 document.addEventListener("keydown", (0, _handleEnterDefault.default));
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"hMyTC","./handleEnter":"gnhIR"}],"hMyTC":[function(require,module,exports) {
-exports.interopDefault = function(a) {
-    return a && a.__esModule ? a : {
-        default: a
-    };
-};
-exports.defineInteropFlag = function(a) {
-    Object.defineProperty(a, "__esModule", {
-        value: true
-    });
-};
-exports.exportAll = function(source, dest) {
-    Object.keys(source).forEach(function(key) {
-        if (key === "default" || key === "__esModule" || dest.hasOwnProperty(key)) return;
-        Object.defineProperty(dest, key, {
-            enumerable: true,
-            get: function() {
-                return source[key];
-            }
-        });
-    });
-    return dest;
-};
-exports.export = function(dest, destName, get) {
-    Object.defineProperty(dest, destName, {
-        enumerable: true,
-        get: get
-    });
-};
-
-},{}],"gnhIR":[function(require,module,exports) {
+},{"./handleEnter":"gnhIR","@parcel/transformer-js/src/esmodule-helpers.js":"hMyTC"}],"gnhIR":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _renderPrompt = require("../renderers/renderPrompt");
@@ -658,7 +628,37 @@ const Input = ()=>{
 };
 exports.default = Input;
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"hMyTC"}],"iJ5Ae":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"hMyTC"}],"hMyTC":[function(require,module,exports) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, "__esModule", {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === "default" || key === "__esModule" || dest.hasOwnProperty(key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
+
+},{}],"iJ5Ae":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 const Prompt = (prompt)=>{
@@ -672,7 +672,7 @@ exports.default = Prompt;
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"hMyTC"}],"a8PtX":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-const getPrompt = ()=>"guest@shasherazi ~ $";
+const getPrompt = ()=>"[guest@shasherazi ~] $";
 exports.default = getPrompt;
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"hMyTC"}],"gHj76":[function(require,module,exports) {
