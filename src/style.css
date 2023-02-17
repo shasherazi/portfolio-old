@@ -50,6 +50,7 @@ body {
 
 .prompt-input {
   font-family: 'JetBrains Mono', monospace;
+  font-size: 16px;
   caret-color: var(--yellow);
   caret-shape: block;
   border: none;
