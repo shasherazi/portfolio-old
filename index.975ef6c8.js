@@ -583,7 +583,6 @@ const handleEnter = (e)=>{
         input.disabled = true;
         const inputVal = input.value;
         const response = (0, _handleInputDefault.default)(inputVal);
-        input.value = "";
         (0, _renderResponseDefault.default)(response, ".promptsAndResponses");
         (0, _renderPromptDefault.default)(".promptsAndResponses");
         document.querySelector(`#input-${inputIdAsInt + 1}`).focus();
