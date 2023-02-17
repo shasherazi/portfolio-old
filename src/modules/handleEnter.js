@@ -14,8 +14,6 @@ const handleEnter = (e) => {
     const inputVal = input.value;
     const response = handleInput(inputVal);
 
-    input.value = '';
-
     renderResponse(response, '.promptsAndResponses');
     renderPrompt('.promptsAndResponses');
     document.querySelector(`#input-${inputIdAsInt + 1}`).focus();
