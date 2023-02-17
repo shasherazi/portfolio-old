@@ -25,12 +25,12 @@ body {
   cursor: pointer;
 }
 
-.list-item-link {
+a {
   text-decoration: none;
   color: var(--orange);
 }
 
-.list-item-link:hover {
+a:hover {
   color: var(--yellow);
   text-decoration: underline;
 }
