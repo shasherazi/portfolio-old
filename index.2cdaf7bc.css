@@ -24,12 +24,12 @@ html, body {
   display: flex;
 }
 
-.list-item-link {
+a {
   color: var(--orange);
   text-decoration: none;
 }
 
-.list-item-link:hover {
+a:hover {
   color: var(--yellow);
   text-decoration: underline;
 }
