@@ -14,15 +14,17 @@ body {
   color: var(--white);
   font-family: 'JetBrains Mono', monospace;
   font-size: 16px;
+  min-height: 100vh;
 }
 
 .nav-list {
   list-style-type: none;
   display: flex;
   justify-content: end;
-  padding-right: 20px;
+  padding:16px 20px;
   gap: 50px;
   cursor: pointer;
+  margin: 0;
 }
 
 a {
