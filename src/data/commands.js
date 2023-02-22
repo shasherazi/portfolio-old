@@ -1,7 +1,7 @@
 export default [
   {
     name: 'help',
-    response: 'welcome to my portfolio. there isn\'t much going around here rn <br/> as of now, these are the only commands that you can use: <br/> <br/> <strong>help</strong> - shows this message <br/> <strong>about</strong> - shows a little bit about me <br/> <strong>contact</strong> - shows my contact info',
+    response: 'welcome to my portfolio. there isn\'t much going around here rn <br/>as of now, these are the only commands that you can use: <br/> <br/><strong>help</strong> - shows this message <br/><strong>about</strong> - shows a little bit about me <br/><strong>contact</strong> - shows my contact info',
   },
   {
     name: 'about',
@@ -9,7 +9,7 @@ export default [
   },
   {
     name: 'contact',
-    response: 'here is my encrtyped email address: cvnnvimviyjhu@bhvdg.xjh <br /> start your mail with <strong>veni, vidi, vici</strong> if you successfully decrypt my email address and i\'ll get back to you as soon as possible',
+    response: 'here is my encrtyped email address: cvnnvimviyjhu@bhvdg.xjh <br />start your mail with <strong>veni, vidi, vici</strong> if you successfully decrypt my email address and i\'ll get back to you as soon as possible',
   },
   {
     name: 'neofetch',

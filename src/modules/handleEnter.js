@@ -11,7 +11,7 @@ const handleEnter = (e) => {
     input.blur();
     input.disabled = true;
 
-    const inputVal = input.value;
+    const inputVal = input.value.toLowerCase();
     const response = handleInput(inputVal);
 
     renderResponse(response, '.promptsAndResponses');
