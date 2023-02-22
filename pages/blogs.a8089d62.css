@@ -1,0 +1,2 @@
+:root{--background:#0c1021;--yellow:#fbde2d;--blue:#8da6ce;--orange:#ff6400;--white:white}.main{flex-direction:column;align-items:center;padding:0 3rem;display:flex}.heading{text-align:center;margin-top:15px;font-size:2.5rem;font-weight:700}.blogs-list{flex-direction:column;margin:0;padding:0;list-style-type:none;display:flex}.blog-item{flex-direction:column;margin:1rem 0;display:flex}.blog-link{font-size:2rem;font-weight:700}.date{font-size:14px}.hr{width:100%;border-color:var(--blue)}
+/*# sourceMappingURL=blogs.a8089d62.css.map */

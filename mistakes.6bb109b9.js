@@ -142,13 +142,13 @@
       this[globalName] = mainExports;
     }
   }
-})({"au4Ql":[function(require,module,exports) {
+})({"6IRIO":[function(require,module,exports) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d6ea1d42532a7575";
-module.bundle.HMR_BUNDLE_ID = "890e741a975ef6c8";
+module.bundle.HMR_BUNDLE_ID = "8b48b73a6bb109b9";
 "use strict";
 /* global HMR_HOST, HMR_PORT, HMR_ENV_HASH, HMR_SECURE, chrome, browser, globalThis, __parcel__import__, __parcel__importScripts__, ServiceWorkerGlobalScope */ /*::
 import type {
@@ -556,173 +556,8 @@ function hmrAccept(bundle, id) {
     });
 }
 
-},{}],"8lqZg":[function(require,module,exports) {
-var _eventListners = require("./modules/eventListners");
+},{}],"j8Yhv":[function(require,module,exports) {
 
-},{"./modules/eventListners":"eYhzN"}],"eYhzN":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-var _handleEnter = require("./handleEnter");
-var _handleEnterDefault = parcelHelpers.interopDefault(_handleEnter);
-document.addEventListener("keydown", (0, _handleEnterDefault.default));
+},{}]},["6IRIO","j8Yhv"], "j8Yhv", "parcelRequire2041")
 
-},{"./handleEnter":"gnhIR","@parcel/transformer-js/src/esmodule-helpers.js":"hMyTC"}],"gnhIR":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _renderPrompt = require("../renderers/renderPrompt");
-var _renderPromptDefault = parcelHelpers.interopDefault(_renderPrompt);
-var _renderResponse = require("../renderers/renderResponse");
-var _renderResponseDefault = parcelHelpers.interopDefault(_renderResponse);
-var _handleInput = require("./handleInput");
-var _handleInputDefault = parcelHelpers.interopDefault(_handleInput);
-const handleEnter = (e)=>{
-    if (e.key === "Enter" && e.target.closest(".prompt-input")) {
-        const input = e.target;
-        const inputId = input.id;
-        const inputIdAsInt = parseInt(inputId.split("-")[1], 10);
-        input.blur();
-        input.disabled = true;
-        const inputVal = input.value.toLowerCase();
-        const response = (0, _handleInputDefault.default)(inputVal);
-        (0, _renderResponseDefault.default)(response, ".promptsAndResponses");
-        (0, _renderPromptDefault.default)(".promptsAndResponses");
-        document.querySelector(`#input-${inputIdAsInt + 1}`).focus();
-    }
-};
-exports.default = handleEnter;
-
-},{"../renderers/renderPrompt":"hv20L","../renderers/renderResponse":"gHj76","./handleInput":"k69dh","@parcel/transformer-js/src/esmodule-helpers.js":"hMyTC"}],"hv20L":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _input = require("../components/Input");
-var _inputDefault = parcelHelpers.interopDefault(_input);
-var _prompt = require("../components/Prompt");
-var _promptDefault = parcelHelpers.interopDefault(_prompt);
-var _getPrompt = require("../modules/getPrompt");
-var _getPromptDefault = parcelHelpers.interopDefault(_getPrompt);
-const renderPrompt = (parentClassName)=>{
-    const parent = document.querySelector(parentClassName);
-    const promptDiv = document.createElement("div");
-    promptDiv.classList.add("promptDiv");
-    const prompt = (0, _promptDefault.default)((0, _getPromptDefault.default)());
-    const input = (0, _inputDefault.default)();
-    promptDiv.appendChild(prompt);
-    promptDiv.appendChild(input);
-    parent.appendChild(promptDiv);
-};
-exports.default = renderPrompt;
-
-},{"../components/Input":"irpU3","../components/Prompt":"iJ5Ae","../modules/getPrompt":"a8PtX","@parcel/transformer-js/src/esmodule-helpers.js":"hMyTC"}],"irpU3":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-let inputId = 2;
-const Input = ()=>{
-    const input = document.createElement("input");
-    input.classList.add("input");
-    input.classList.add("prompt-input");
-    input.setAttribute("type", "text");
-    input.setAttribute("autofocus", "true");
-    input.id = `input-${inputId}`;
-    inputId += 1;
-    return input;
-};
-exports.default = Input;
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"hMyTC"}],"hMyTC":[function(require,module,exports) {
-exports.interopDefault = function(a) {
-    return a && a.__esModule ? a : {
-        default: a
-    };
-};
-exports.defineInteropFlag = function(a) {
-    Object.defineProperty(a, "__esModule", {
-        value: true
-    });
-};
-exports.exportAll = function(source, dest) {
-    Object.keys(source).forEach(function(key) {
-        if (key === "default" || key === "__esModule" || dest.hasOwnProperty(key)) return;
-        Object.defineProperty(dest, key, {
-            enumerable: true,
-            get: function() {
-                return source[key];
-            }
-        });
-    });
-    return dest;
-};
-exports.export = function(dest, destName, get) {
-    Object.defineProperty(dest, destName, {
-        enumerable: true,
-        get: get
-    });
-};
-
-},{}],"iJ5Ae":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-const Prompt = (prompt)=>{
-    const promptSpan = document.createElement("span");
-    promptSpan.classList.add("prompt");
-    promptSpan.innerHTML = prompt;
-    return promptSpan;
-};
-exports.default = Prompt;
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"hMyTC"}],"a8PtX":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-const getPrompt = ()=>"[guest@shasherazi ~] $";
-exports.default = getPrompt;
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"hMyTC"}],"gHj76":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-const renderResponse = (response, parentClassName)=>{
-    const parent = document.querySelector(parentClassName);
-    const responseDiv = document.createElement("pre");
-    responseDiv.classList.add("response");
-    responseDiv.innerHTML = response;
-    parent.appendChild(responseDiv);
-};
-exports.default = renderResponse;
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"hMyTC"}],"k69dh":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _commands = require("../data/commands");
-var _commandsDefault = parcelHelpers.interopDefault(_commands);
-const handleInput = (input)=>{
-    if (!input) return "";
-    const { response  } = (0, _commandsDefault.default).find((command)=>command.name === input) || {
-        response: "command not found"
-    };
-    return response;
-};
-exports.default = handleInput;
-
-},{"../data/commands":"g78Ou","@parcel/transformer-js/src/esmodule-helpers.js":"hMyTC"}],"g78Ou":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-exports.default = [
-    {
-        name: "help",
-        response: "welcome to my portfolio. there isn't much going around here rn <br/>as of now, these are the only commands that you can use: <br/> <br/><strong>help</strong> - shows this message <br/><strong>about</strong> - shows a little bit about me <br/><strong>contact</strong> - shows my contact info"
-    },
-    {
-        name: "about",
-        response: 'i\'m a 19-year-old (age might not be up to date, i was born in 2003, do your math) Pakistani who loves to code. currently, i\'m an undergraduate student at <a href="https://www.uopeople.edu/" target="_blank">University of the People</a>. these days i\'m enrolled at a bootcamp called <a href="https://www.microverse.org/" target="_blank">Microverse</a> where i work on remote projects with developers from all around the world'
-    },
-    {
-        name: "contact",
-        response: "here is my encrtyped email address: cvnnvimviyjhu@bhvdg.xjh <br />start your mail with <strong>veni, vidi, vici</strong> if you successfully decrypt my email address and i'll get back to you as soon as possible"
-    },
-    {
-        name: "neofetch",
-        //   eslint-disable-next-line no-multi-str
-        response: '                   -` \n                  .o+`\n                 `ooo/\n                `+oooo:\n               `+oooooo:          shasherazi@shasherazi\n               -+oooooo+:\n             `/:-:++oooo+:        OS ➜ Arch Linux\n            `/++++/+++++++:       ├ laptop ➜ 20M6S06P00 ThinkPad L380\n           `/++++++++++++++:      ├ shell ➜ zsh\n          `/+++ooooooooooooo/`    ├ bar ➜ polybar\n         ./ooosssso++osssssso+`   └ compositor ➜ picom\n        .oossssso-````/ossssss+`\n       -osssssso.      :ssssssso.\n      :osssssss/        osssso+++.\n     /ossssssss/        +ssssooo/-\n   `/ossssso+/:-        -:/+osssso+-\n  `+sso+:-`                 `.-/+oso:\n `++:.                           `-/+/\n .`                                 `/\n\n Type "help" to..., well, get help'
-    }
-];
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"hMyTC"}]},["au4Ql","8lqZg"], "8lqZg", "parcelRequire2041")
-
-//# sourceMappingURL=index.975ef6c8.js.map
+//# sourceMappingURL=mistakes.6bb109b9.js.map
