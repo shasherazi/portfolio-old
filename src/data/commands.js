@@ -11,4 +11,29 @@ export default [
     name: 'contact',
     response: 'here is my encrtyped email address: cvnnvimviyjhu@bhvdg.xjh <br /> start your mail with <strong>veni, vidi, vici</strong> if you successfully decrypt my email address and i\'ll get back to you as soon as possible',
   },
+  {
+    name: 'neofetch',
+    //   eslint-disable-next-line no-multi-str
+    response: '                   -` \n\
+                  .o+`\n\
+                 `ooo/\n\
+                `+oooo:\n\
+               `+oooooo:          shasherazi@shasherazi\n\
+               -+oooooo+:\n\
+             `/:-:++oooo+:        OS ➜ Arch Linux\n\
+            `/++++/+++++++:       ├ laptop ➜ 20M6S06P00 ThinkPad L380\n\
+           `/++++++++++++++:      ├ shell ➜ zsh\n\
+          `/+++ooooooooooooo/`    ├ bar ➜ polybar\n\
+         ./ooosssso++osssssso+`   └ compositor ➜ picom\n\
+        .oossssso-````/ossssss+`\n\
+       -osssssso.      :ssssssso.\n\
+      :osssssss/        osssso+++.\n\
+     /ossssssss/        +ssssooo/-\n\
+   `/ossssso+/:-        -:/+osssso+-\n\
+  `+sso+:-`                 `.-/+oso:\n\
+ `++:.                           `-/+/\n\
+ .`                                 `/\n\
+\n\
+ Type "help" to..., well, get help',
+  },
 ];
