@@ -14,7 +14,7 @@ export default defineConfig({
       input: {
         index: resolve(__dirname, './src/index.html'),
         blogs: resolve(__dirname, './src/pages/blogs.html'),
-        mistakes: resolve(__dirname, './src/pages/blogs/mistakes.html'),
+        mistakes: resolve(__dirname, './src/pages/blogs/mistakes/mistakes.html'),
       },
     },
   },
