@@ -1,4 +1,4 @@
-.main {
+.mistakes-main {
   padding: 0 20%;
 }
 
@@ -18,7 +18,7 @@ img {
 }
 
 @media screen and (max-width: 768px) {
-  .main {
+  .mistakes-main {
     padding: 0 10%;
   }
 }
